@@ -1,3 +1,4 @@
+import java.util.HashSet;
 
 public class Pyramid {
     /**
@@ -28,6 +29,17 @@ public class Pyramid {
      * @return a string representation of the pyramid.
      */
     public String returnPyramid(int n){
-        return "";
+
+        String pyramid = "";
+        String star = "*";
+        String newline = "\n";
+
+        for (int row = 1; row <= n; row++) {
+            for (int num = 0; num < row; num++) {
+                pyramid += star;
+            }
+            pyramid += newline;
+        }
+        return pyramid;
     }
 }
